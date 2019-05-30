@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCamera, faQuoteRight, faCalendarAlt, faHome, faMoneyBillAlt } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/Header/Header'
 import ReviewContainer from './components/Reviews/ReviewContainer'
 import ImageSlideshow from './components/ImageSlideshow/ImageSlideshow'
 import BookingCalendar from './components/Calendar/BookingCalendar'
+import Home from './components/Home/Home'
+import Services from './components/Services/Services'
 
 const urls = ["http://localhost:3000/reviews", "http://localhost:3000/events"]
 
@@ -105,9 +110,38 @@ class App extends React.Component {
     return (
       <div className="grid-container">
         <Header />
-        <ImageSlideshow images={this.ImagePaths()} />
-        <ReviewContainer reviews={this.state.reviews} handleNewReview={this.handleNewReview} deleteReview={this.deleteReview} updateReview={this.updateReview}/>
-        <BookingCalendar events={this.state.events} handleNewBooking={this.handleNewBooking}/>
+        <Router>
+            <ul>
+              <li>
+                <NavLink className="link" to="/" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faHome} size="4x" /></NavLink>
+              </li>
+              <li>
+                <NavLink className="link" to="/images" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faCamera} size="4x" /></NavLink>
+              </li>
+              <li>
+                <NavLink className="link" to="/reviews" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faQuoteRight} size="4x" /></NavLink>
+              </li>
+              <li>
+                <NavLink className="link" to="/booking" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faCalendarAlt} size="4x" /></NavLink>
+              </li>
+              <li>
+                <NavLink className="link" to="/services" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faMoneyBillAlt} size="4x" /></NavLink>
+              </li>
+            </ul>
+
+            <Route exact path="/" component={ Home } />
+            <Route path="/services" component={ Services } />
+            <Route
+              path="/images"
+              render={props => <ImageSlideshow images={this.ImagePaths()} />}
+            />
+            <Route path="/reviews"
+              render={props => <ReviewContainer reviews={this.state.reviews} handleNewReview={this.handleNewReview} deleteReview={this.deleteReview} updateReview={this.updateReview}/>}
+            />
+            <Route path="/booking"
+              render={props => <BookingCalendar events={this.state.events} handleNewBooking={this.handleNewBooking}/>}
+            />
+          </Router>
       </div>
     )
   }

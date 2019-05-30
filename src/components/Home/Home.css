@@ -1,0 +1,14 @@
+.home {
+  min-height: 100vh;
+  grid-column: 1/6;
+  grid-row: 3/4;
+  background-color: #8BD7D2;
+  content: align-center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.home-center {
+  text-align: center;
+  vertical-align: middle;
+  padding: 2%;
+}
