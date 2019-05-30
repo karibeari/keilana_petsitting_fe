@@ -3,10 +3,9 @@
   background-color: #FF7E6B;
   min-height: 30vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-
   color: #5D737E;
   font-family: 'Ribeye Marrow', cursive;
   font-size: 3em;

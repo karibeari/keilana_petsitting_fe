@@ -26,7 +26,7 @@ class BookingCalendar extends Component {
     return(
       <div className="calendar-container">
         <h1 className="calendar-header">When is Keilana available?</h1>
-        <NewBookingButton handleNewBooking={this.props.handleNewBooking}/>
+        <NewBookingButton className="center" handleNewBooking={this.props.handleNewBooking}/>
         <div className="calendar">
           <BigCalendar
             localizer={localizer}
