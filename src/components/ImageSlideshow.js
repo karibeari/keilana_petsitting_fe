@@ -37,14 +37,12 @@ export default class ImageSlideshow extends Component {
 
   render() {
     return(
-      <div className="slider">
-        <div className="slider-wrapper">
-          <div className="slide">
+      <div className="slider-container">
+        <div className="slider">
             <img src={this.state.images[this.state.currentIndex]} alt='...' />
-          </div>
+              <div className="prev" aria-hidden="true" onClick={this.goToPrevSlide}><FontAwesomeIcon icon={faChevronCircleLeft} size="2x" /></div>
+              <div className="next" aria-hidden="true" onClick={this.goToNextSlide}><FontAwesomeIcon icon={faChevronCircleRight} size="2x" /></div>
         </div>
-        <div className="prev" aria-hidden="true" onClick={this.goToPrevSlide}><FontAwesomeIcon icon={faChevronCircleLeft} size="2x" /></div>
-        <div className="next" aria-hidden="true" onClick={this.goToNextSlide}><FontAwesomeIcon icon={faChevronCircleRight} size="2x" /></div>
       </div>
     )
   }

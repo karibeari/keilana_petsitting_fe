@@ -1,7 +1,8 @@
 import React from 'react'
 import Review from './Review'
-import ReviewForm from './ReviewForm'
+import NewReviewButton from './NewReviewButton'
 import './ReviewContainer.css'
+
 
 const ReviewContainer = props => {
 
@@ -9,9 +10,9 @@ const ReviewContainer = props => {
 
   return(
     <div className="review-container">
-      <h1 className="review-top">What the pets think...</h1>
+      <h1 className="review-header">What the pets think...</h1>
         {getReviews}
-      <ReviewForm handleNewReview={props.handleNewReview}/>
+      <NewReviewButton handleNewReview={props.handleNewReview} />
     </div>
   )
 

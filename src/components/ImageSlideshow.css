@@ -3,7 +3,15 @@ img {
   opacity: 0.7;
   grid-column: 2/5;
   grid-row: 2/3;
-  max-width: 800px
+  max-width: 700px
+}
+
+.slider-container {
+  position: relative;
+  margin: auto;
+  grid-column: 2/5;
+  grid-row: 2/3;
+  padding: 5%
 }
 
 .slider {
@@ -11,15 +19,6 @@ img {
   margin: auto;
   grid-column: 2/5;
   grid-row: 2/3;
-  padding: 15%
-}
-
-
-
- .slide {
-  backgroundSize: 'cover';
-  backgroundRepeat: 'no-repeat';
-  backgroundPosition: '50% 60%'
 }
 
 .prev, .next {

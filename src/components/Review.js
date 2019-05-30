@@ -28,9 +28,13 @@ export default class Review extends Component {
     return petIcon[this.state.pet_type]
   }
 
-  handleClick = (event) => {
+  handleDeleteReview = (event) => {
     this.props.deleteReview(event.target.value)
   }
+
+  // handleEditReview = (event) => {
+  //   console.log(this.props.filter(review => review.id === event.target.id))
+  // }
 
   render () {
     const {created_at, pet_name, human_name, content, id} = this.state
@@ -38,15 +42,18 @@ export default class Review extends Component {
       <div className="review-grid">
         <div className="left">
           <FontAwesomeIcon className="icon" icon={this.displayPetIcon()} size="4x" /><br></br>
-          <button className="myButton" value={id} onClick={this.handleClick}>Delete</button>
+          <h1>{pet_name}</h1>
+        </div>
+        <div className="center">
+          <h2>{new Date(created_at).toDateString()}</h2>
+          <h3>{human_name} ({pet_name}'s human)</h3>
+          <p>{content}</p>
         </div>
         <div className="right">
-          <h3>{pet_name} stayed with Keilana on {new Date(created_at).toDateString()}</h3>
-          <h3>{human_name}</h3>
-          <p>{content}</p>
+          <button className="myButton" value={id} onClick={this.handleEditReview}>Edit</button>
+          <button className="myButton" value={id} onClick={this.handleDeleteReview}>Delete</button>
         </div>
       </div>
     )
   }
-
 }

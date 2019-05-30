@@ -4,27 +4,40 @@
   grid-row: 3/4;
   background-color: #8BD7D2;
   content: align-center;
-
+  font-family: 'Raleway', sans-serif;
 }
 
 .review-grid {
   display: grid;
-  grid-template-columns: 33%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   content: align-center;
 }
 
 .left {
-  grid-column: 1/2;
+  grid-column: 2/3;
   text-align: center;
+  vertical-align: middle;
+  padding: 5%;
+}
+
+.center {
+  grid-column: 3/4;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5%;
 }
 
 .right {
-  grid-column: 3/4;
+  grid-column: 4/5;
   text-align: center;
+  vertical-align: middle;
+  padding: 20%;
 }
 
-.review-top {
+.review-header {
   text-align: center;
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 4em;
 }
 
 .icon {
@@ -40,11 +53,12 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: 'Raleway', sans-serif;
 	font-size:17px;
-	padding:10px 20px;
+	padding:20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
+  margin: 10px;
 }
 
 .myButton:hover {
