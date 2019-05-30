@@ -40,6 +40,7 @@ export default class ReviewForm extends Component {
           <h1 className="form-title">Add a Review</h1>
           <form  onSubmit={this.handleSubmit}>
             <select className="field" name="pet_type" value={pet_type} onChange={this.handleChange}>
+              <option ></option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
               <option value="fish">Fish</option>

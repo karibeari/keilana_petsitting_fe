@@ -3,10 +3,9 @@ import Review from './Review'
 import NewReviewButton from './NewReviewButton'
 import './ReviewContainer.css'
 
-
 const ReviewContainer = props => {
 
-  const getReviews = props.reviews.map(review => <Review {...review} key={review.id} deleteReview={props.deleteReview}/>)
+  const getReviews = props.reviews.map(review => <Review {...review} key={review.id} deleteReview={props.deleteReview} updateReview={props.updateReview}/>)
 
   return(
     <div className="review-container">

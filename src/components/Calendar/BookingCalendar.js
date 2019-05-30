@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 import BigCalendar from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment'
-import './Calendar.css'
+import NewBookingButton from './NewBookingButton'
+import './BookingCalendar.css'
 
 const localizer = BigCalendar.momentLocalizer(moment)
 
-class Calendar extends Component {
+class BookingCalendar extends Component {
 
   setDates = () => {
     const events = []
     this.props.events.map(event => {
-      console.log('hi')
        return events.push({
         start: new Date(event.start),
         end: new Date(event.end),
@@ -25,7 +25,8 @@ class Calendar extends Component {
   render() {
     return(
       <div className="calendar-container">
-        <h1 className="calendar-header">Book a Visit</h1>
+        <h1 className="calendar-header">When is Keilana available?</h1>
+        <NewBookingButton handleNewBooking={this.props.handleNewBooking}/>
         <div className="calendar">
           <BigCalendar
             localizer={localizer}
@@ -39,4 +40,4 @@ class Calendar extends Component {
   }
 }
 
-export default Calendar
+export default BookingCalendar

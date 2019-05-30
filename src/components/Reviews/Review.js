@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDog, faCat, faDove, faFish, faDragon } from '@fortawesome/free-solid-svg-icons'
 import './ReviewContainer.css'
+import EditReviewForm from './EditReviewForm'
 
 const petIcon = {
    dog: faDog,
@@ -20,8 +21,17 @@ export default class Review extends Component {
       pet_name: props.pet_name,
       human_name: props.human_name,
       content: props.content,
-      id: props.id
+      id: props.id,
+      show: false
     }
+  }
+
+  showModal = () => {
+    this.setState({ show: true });
+  }
+
+  hideModal = () => {
+    this.setState({ show: false });
   }
 
   displayPetIcon = () => {
@@ -40,6 +50,7 @@ export default class Review extends Component {
     const {created_at, pet_name, human_name, content, id} = this.state
     return (
       <div className="review-grid">
+        <EditReviewForm show={this.state.show} handleClose={this.hideModal} updateReview={this.props.updateReview} review={this.state}/>
         <div className="left">
           <FontAwesomeIcon className="icon" icon={this.displayPetIcon()} size="4x" /><br></br>
           <h1>{pet_name}</h1>
@@ -50,8 +61,8 @@ export default class Review extends Component {
           <p>{content}</p>
         </div>
         <div className="right">
-          <button className="myButton" value={id} onClick={this.handleEditReview}>Edit</button>
-          <button className="myButton" value={id} onClick={this.handleDeleteReview}>Delete</button>
+          <button className="myButton" value={id} onClick={this.showModal}>Edit</button>
+          <button className="myButton" value={id} review={this.props} onClick={this.handleDeleteReview}>Delete</button>
         </div>
       </div>
     )
