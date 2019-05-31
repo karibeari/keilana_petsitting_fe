@@ -3,12 +3,141 @@
   grid-column: 1/6;
   grid-row: 3/4;
   background-color: #0C5E75;
+  background-image: url(https://iconka.com/wp-content/uploads/edd/2017/08/dachshund_preview2.png);
   content: align-center;
   font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 5% 1fr 5% 1fr 5% 1fr 5%;
+  grid-template-rows: 5% 1fr 5% 1fr 5%;
+}
+
+.fade-card {
+  background-color: rgba(248, 247, 216, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-card h1 {
+  margin-top: 20%;
 }
 
 .services-center {
   text-align: center;
   vertical-align: middle;
   padding: 2%;
+}
+
+.services-card {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  perspective: 1000px;
+  border-radius: 25px;
+}
+
+.services-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.services-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.services-card:hover .services-card-inner {
+  transform: rotateY(180deg);
+}
+
+.services-card-front, .services-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+.services-card-front {
+  background-color: #7BC486;
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 1.5em;
+  color: #041F2D;
+  border-radius: 25px;
+}
+
+.services-card-back {
+  background-color: #C0C5C1;
+  color: #041F2D;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  transform: rotateY(180deg);
+  padding: 5%;
+  border-radius: 25px;
+}
+
+#one {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#one .services-card-front {
+  background-image: url("http://merchdope.com/wp-content/uploads/2018/10/Jack-Russell-Terrier.jpg");
+  background-size: cover;
+}
+
+#two {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#two .services-card-front {
+  background-image: url("https://cdn.kinsights.com/cache/55/e4/55e4e49726b497353a591c3c6d08e0be.jpg");
+  background-size: cover;
+}
+
+#three {
+  grid-column: 6;
+  grid-row: 2;
+}
+
+#three .services-card-front {
+  background-image: url("https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/mastiff-card-medium.jpg?bust=1535568273&width=560");
+  background-size: cover;
+}
+
+#four {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#four .services-card-front {
+  background-image: url("https://timedotcom.files.wordpress.com/2018/08/new-zealand-cat-ban.jpg");
+  background-size: cover;
+}
+
+#five {
+  grid-column: 4;
+  grid-row: 4
+}
+
+#five .services-card-front {
+  background-image: url("https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwMy85MTcvb3JpZ2luYWwvaGVkZ2Vob2cuanBn");background-size: cover;
+}
+
+#six {
+  grid-column: 6;
+  grid-row: 4
+}
+
+#six .services-card-front {
+  background-image: url("https://i.pinimg.com/originals/d9/77/f9/d977f90240a4cff974b53118a089144f.jpg");background-size: cover;
 }
