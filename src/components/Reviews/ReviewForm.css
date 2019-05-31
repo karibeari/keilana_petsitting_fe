@@ -10,7 +10,7 @@
 
 .modal-main {
   position:fixed;
-  background: white;
+  background: #99B4C4;
   width: 80%;
   height: auto;
   top:50%;
@@ -35,7 +35,7 @@
   height: 30px;
   border-radius: 4px;
   position: relative;
-  background-color: rgba(255,255,255,0.3);
+  background-color: #F9F6ED;
   margin: 5%;
   transition: 0.3s all;
   text-align: center;
@@ -45,28 +45,4 @@
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
   text-align: center;
-}
-
-.myButton {
-	background-color:#44c767;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 20px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-
-.myButton:hover {
-	background-color:#5cbf2a;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
 }

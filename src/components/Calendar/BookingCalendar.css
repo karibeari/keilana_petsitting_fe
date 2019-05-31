@@ -1,7 +1,8 @@
 .calendar-container {
   grid-row: 3;
   grid-column: 1/6;
-  background-color: #00F0B5;
+  background-color: #00EAAF;
+  opacity: 0.9;
   padding-bottom: 10%;
   display: grid;
   grid-template-columns: 10% 1fr 1fr 1fr 10%;
@@ -19,6 +20,11 @@
 .center-button {
   padding-bottom: 5%;
   margin: 0;
+  opacity: 1;
+}
+
+.center-button button {
+  font-size: 40px;
 }
 
 .calendar-header {
@@ -32,4 +38,5 @@
 .date-range {
   text-align: center;
   padding: 20px;
+  margin: 0 20%;
 }

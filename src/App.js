@@ -114,19 +114,19 @@ class App extends React.Component {
           <div className="navbar">
             <ul>
               <li>
-                <NavLink className="link" to="/" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faHome} size="4x" /></NavLink>
+                <NavLink className="link" to="/" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faHome} size="4x" /></NavLink>
               </li>
               <li>
-                <NavLink className="link" to="/images" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faCamera} size="4x" /></NavLink>
+                <NavLink className="link" to="/images" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faCamera} size="4x" /></NavLink>
               </li>
               <li>
-                <NavLink className="link" to="/reviews" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faQuoteRight} size="4x" /></NavLink>
+                <NavLink className="link" to="/reviews" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faQuoteRight} size="4x" /></NavLink>
               </li>
               <li>
-                <NavLink className="link" to="/booking" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faCalendarAlt} size="4x" /></NavLink>
+                <NavLink className="link" to="/booking" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faCalendarAlt} size="4x" /></NavLink>
               </li>
               <li>
-                <NavLink className="link" to="/services" activeClassName="hurray"><FontAwesomeIcon className="icon" icon={faMoneyBillAlt} size="4x" /></NavLink>
+                <NavLink className="link" to="/services" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faMoneyBillAlt} size="4x" /></NavLink>
               </li>
             </ul>
           </div>

@@ -1,21 +1,74 @@
+.home-image {
+  width: 600px;
+  height: 600px
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 600px;
+  perspective: 1000px;
+  border-radius: 25px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 25px;
+}
+
+.flip-card-back {
+  background-color: #5D737E;
+  color: #8BD7D2;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  transform: rotateY(180deg);
+  padding: 2%;
+  border-radius: 25px;
+}
 
 .home {
   min-height: 100vh;
   grid-column: 1/6;
   grid-row: 3/4;
-  background-image: url('../assets/img3.jpg');
-  background-position: center;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  content: align-center;
+  opacity: 0.8;
   font-family: 'Raleway', sans-serif;
-
+  display: grid;
+  grid-template-columns: 25% 1fr 25%;
+  background-image: url("../assets/chevron.png");
+  background-size: cover;
 }
 
-.home-center {
+#image-container {
+  grid-column: 2/3;
+  position: relative;
   text-align: center;
-  vertical-align: middle;
-  padding: 2%;
-  opacity: 1;
+  padding: 5%;
+}
+
+.flip-card-header {
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 1.5em;
+  color: #041F2D;
 }

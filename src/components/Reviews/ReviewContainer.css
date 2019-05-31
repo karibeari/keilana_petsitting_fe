@@ -44,8 +44,12 @@
   padding: 30px;
 }
 
+#new-review-button {
+  font-size: 40px;
+}
+
 .myButton {
-	background-color:#44c767;
+	background-color:#0C5E75;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:28px;
@@ -54,15 +58,16 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family: 'Raleway', sans-serif;
-	font-size:17px;
-	padding:20px;
+	font-size:14px;
+	padding:10px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-  margin: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .myButton:hover {
-	background-color:#5cbf2a;
+	background-color:#1392B5;
 }
 .myButton:active {
 	position:relative;

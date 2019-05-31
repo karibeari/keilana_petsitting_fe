@@ -42,10 +42,6 @@ export default class Review extends Component {
     this.props.deleteReview(event.target.value)
   }
 
-  // handleEditReview = (event) => {
-  //   console.log(this.props.filter(review => review.id === event.target.id))
-  // }
-
   render () {
     const {created_at, pet_name, human_name, content, id} = this.state
     return (
