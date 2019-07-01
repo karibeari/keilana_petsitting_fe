@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import BigCalendar from 'react-big-calendar'
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment'
-import NewBookingButton from './NewBookingButton'
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './BookingCalendar.css'
+import NewBookingButton from './NewBookingButton'
+
 
 const localizer = BigCalendar.momentLocalizer(moment)
 
@@ -27,6 +28,8 @@ class BookingCalendar extends Component {
       <div className="calendar-container">
         <h1 className="calendar-header">When is Keilana available?</h1>
         <NewBookingButton className="center" handleNewBooking={this.props.handleNewBooking}/>
+        <h2>NOTE: Please contact Keilana to confirm booking.</h2>
+        <h2>keilanaferenczy@gmail.com | 310-502-8143</h2>
         <div className="calendar">
           <BigCalendar
             localizer={localizer}

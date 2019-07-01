@@ -10,7 +10,7 @@ import BookingCalendar from './components/Calendar/BookingCalendar'
 import Home from './components/Home/Home'
 import Services from './components/Services/Services'
 
-const urls = ["http://localhost:3000/reviews", "http://localhost:3000/events"]
+const urls = ["https://keilana-petsitting-be.herokuapp.com/reviews", "https://keilana-petsitting-be.herokuapp.com/events"]
 
 class App extends React.Component {
   state = {
@@ -37,7 +37,7 @@ class App extends React.Component {
   }
 
   handleNewReview = (review) => {
-    fetch("http://localhost:3000/reviews", {
+    fetch("https://keilana-petsitting-be.herokuapp.com/reviews", {
       method: 'POST' ,
       headers: {
         'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ class App extends React.Component {
   }
 
   deleteReview = (id) => {
-    fetch(`http://localhost:3000/reviews/${id}`, {
+    fetch(`https://keilana-petsitting-be.herokuapp.com/reviews/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ class App extends React.Component {
   }
 
   updateReview = (review) => {
-    fetch(`http://localhost:3000/reviews/${review.id}`, {
+    fetch(`https://keilana-petsitting-be.herokuapp.com/reviews/${review.id}`, {
       method: 'PATCH' ,
       headers: {
         'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ class App extends React.Component {
   }
 
   handleNewBooking = (event) => {
-    fetch("http://localhost:3000/events", {
+    fetch("https://keilana-petsitting-be.herokuapp.com/events", {
       method: 'POST' ,
       headers: {
         'Content-Type': 'application/json'

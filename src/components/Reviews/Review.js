@@ -53,8 +53,10 @@ export default class Review extends Component {
         </div>
         <div className="center">
           <h2>{new Date(created_at).toDateString()}</h2>
+          <br></br>
           <h3>{human_name} ({pet_name}'s human)</h3>
-          <p>{content}</p>
+          <br></br>
+          <h3>{content}</h3>
         </div>
         <div className="right">
           <button className="myButton" value={id} onClick={this.showModal}>Edit</button>

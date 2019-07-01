@@ -40,10 +40,8 @@ export default class BookingForm extends Component {
 
   render() {
     const {pet_name, human_name} = this.state
-
     return(
       <div className={this.showHideClassName()}>
-
         <section className="modal-main">
           <form  onSubmit={this.handleSubmit}>
             <input className="field" name="pet_name" type="text" value={pet_name} placeholder="Pet Name" onChange={this.handleChange} />
