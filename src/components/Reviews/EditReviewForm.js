@@ -32,7 +32,7 @@ export default class EditReviewForm extends Component {
   }
 
   render() {
-    const {id, pet_type, pet_name, human_name, content} = this.state
+    const {pet_type, pet_name, human_name, content} = this.state
     return(
       <div className={this.showHideClassName()}>
         <section className="modal-main">
