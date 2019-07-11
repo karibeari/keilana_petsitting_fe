@@ -18,6 +18,10 @@ class App extends React.Component {
     events: []
   }
 
+  componentWillMount() {
+    document.title = "Keilana's Pets & Co"
+  }
+  
   componentDidMount() {
     Promise.all(urls.map(url =>
       fetch(url)
