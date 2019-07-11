@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import './ImageSlideshow.css'
+// import './ImageSlideshow.css'
 
 export default class ImageSlideshow extends Component {
   constructor(props) {
@@ -13,6 +15,16 @@ export default class ImageSlideshow extends Component {
       translateValue: 0
     }
   }
+
+  makeSlides = () => this.state.images.map(image => {
+    return <div>
+      <img src={image} alt=""/>
+      <p className="legend">Legend 1</p>
+    </div>
+  })
+
+
+
 
   goToPrevSlide = () => {
     if(this.state.currentIndex === 0) {
@@ -37,19 +49,24 @@ export default class ImageSlideshow extends Component {
   render() {
     return(
       <div className="slideshow-background">
-        <header className="slideshow-header">
-          <h2>Life Goal:</h2>
-          <h3>Pet ALL the dogs</h3>
-          <h5>(and cats, snakes, hamsters, etc.)</h5>
-        </header>
-        <div className="slider-container">
-          <div className="slider">
-            <img src={this.state.images[this.state.currentIndex]} alt='...' />
-              <div className="prev" aria-hidden="true" onClick={this.goToPrevSlide}><FontAwesomeIcon icon={faChevronCircleLeft} size="2x" /></div>
-              <div className="next" aria-hidden="true" onClick={this.goToNextSlide}><FontAwesomeIcon icon={faChevronCircleRight} size="2x" /></div>
-          </div>
-        </div>
-      </div>
+        <Carousel autoPlay>
+
+          {this.makeSlides()}
+      </Carousel>
+    </div>
   )
   }
 }
+
+// <header className="slideshow-header">
+// <h2>Life Goal:</h2>
+// <h3>Pet ALL the dogs</h3>
+// <h5>(and cats, snakes, hamsters, etc.)</h5>
+// </header>
+// <div className="slider-container">
+// <div className="slider">
+//   <img src={this.state.images[this.state.currentIndex]} alt='...' />
+//     <div className="prev" aria-hidden="true" onClick={this.goToPrevSlide}><FontAwesomeIcon icon={faChevronCircleLeft} size="2x" /></div>
+//     <div className="next" aria-hidden="true" onClick={this.goToNextSlide}><FontAwesomeIcon icon={faChevronCircleRight} size="2x" /></div>
+// </div>
+// </div>

@@ -1,7 +1,7 @@
 .header {
-  grid-column: 1 / 6;
+  /* grid-column: 1 / 6; */
   background-color: #FF7E6B;
-  min-height: 30vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: row;
   align-items: center;

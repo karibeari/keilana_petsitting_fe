@@ -51,8 +51,8 @@
 
 .home {
   min-height: 100vh;
-  grid-column: 1/6;
-  grid-row: 3/4;
+  /* grid-column: 1/6; */
+  /* grid-row: 3/4; */
   opacity: 0.8;
   font-family: 'Raleway', sans-serif;
 
