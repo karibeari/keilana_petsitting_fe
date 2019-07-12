@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// import './ImageSlideshow.css'
+import './ImageSlideshow.css'
 
 export default class ImageSlideshow extends Component {
   constructor(props) {
@@ -19,37 +19,18 @@ export default class ImageSlideshow extends Component {
   makeSlides = () => this.state.images.map(image => {
     return <div>
       <img src={image} alt=""/>
-      <p className="legend">Legend 1</p>
     </div>
   })
-
-
-
-
-  goToPrevSlide = () => {
-    if(this.state.currentIndex === 0) {
-      return this.setState({currentIndex: 0})
-    }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1,
-
-    }))
-   }
-
-  goToNextSlide = () => {
-    if(this.state.currentIndex === this.state.images.length - 1) {
-      return this.setState({
-        currentIndex: 0
-      })
-    }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1 }))
-  }
 
   render() {
     return(
       <div className="slideshow-background">
-        <Carousel autoPlay>
+        <header className="slideshow-header">
+          <h2>Life Goal:</h2>
+          <h3>Pet ALL the dogs</h3>
+          <h5>(and cats, snakes, hamsters, etc.)</h5>
+        </header>
+        <Carousel className="slider-container" autoPlay>
 
           {this.makeSlides()}
       </Carousel>
@@ -58,11 +39,7 @@ export default class ImageSlideshow extends Component {
   }
 }
 
-// <header className="slideshow-header">
-// <h2>Life Goal:</h2>
-// <h3>Pet ALL the dogs</h3>
-// <h5>(and cats, snakes, hamsters, etc.)</h5>
-// </header>
+//
 // <div className="slider-container">
 // <div className="slider">
 //   <img src={this.state.images[this.state.currentIndex]} alt='...' />
