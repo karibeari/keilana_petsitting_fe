@@ -9,11 +9,9 @@ h1 {
   font-size: 6vw;
 }
 
-.grid-container {
-  background-color: #5D737E;
-  text-align: center;
+main {
+  display: grid;
 }
-
 
 .navbar {
   display: flex;

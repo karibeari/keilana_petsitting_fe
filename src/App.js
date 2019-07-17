@@ -110,7 +110,7 @@ class App extends React.Component {
       <main >
         <Header />
         <Router>
-          <div className="navbar">
+          <navbar className="navbar">
             <ul>
               <li>
                 <NavLink className="link" to="/" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faHome} size="4x" /></NavLink>
@@ -128,7 +128,7 @@ class App extends React.Component {
                 <NavLink className="link" to="/services" activeClassName="hurray"><FontAwesomeIcon className="icon hvr-grow-rotate" icon={faMoneyBillAlt} size="4x" /></NavLink>
               </li>
             </ul>
-          </div>
+          </navbar>
 
             <Route exact path="/" component={ Home } />
             <Route path="/services" component={ Services } />

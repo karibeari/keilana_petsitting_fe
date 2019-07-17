@@ -21,9 +21,9 @@ export default class ImageSlideshow extends Component {
 
   render() {
     return(
-      <div className="slideshow-background">
-        <Coverflow className="slider-container"
-          width={960}
+      <div className="coverflow-background">
+        <Coverflow id="coverflow-container"
+          width="100vw"
           height={480}
           displayQuantityOfSide={2}
           navigation={false}
