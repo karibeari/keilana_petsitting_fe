@@ -1,29 +1,14 @@
 img {
-  border-radius: 25px;
-  opacity: 0.8;
+  display: block;
+  width: 100%;
 }
 
-.carousel .thumb {
-  opacity: 1;
-  border: none;
-}
 
-.carousel {
-  border-radius: 8%;
-}
-
-.carousel .carousel-status {
-  right: 50%;
-}
 .slider-container {
   padding: 5%;
   width: 50%;
   margin: auto;
   border-radius: 25%;
-}
-
-.control-dots {
-  visibility: hidden;
 }
 
 

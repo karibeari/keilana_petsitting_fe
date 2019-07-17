@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import AliceCarousel from 'react-alice-carousel'
+import Coverflow from 'react-coverflow'
+import "react-alice-carousel/lib/alice-carousel.css";
 
 import './ImageSlideshow.css'
 
@@ -23,9 +24,14 @@ export default class ImageSlideshow extends Component {
   render() {
     return(
       <div className="slideshow-background">
-        <Carousel className="slider-container" autoPlay>
+        <Coverflow className="slider-container"
+          width={960}
+          height={480}
+          displayQuantityOfSide={2}
+          navigation={false}
+          enableHeading={false}>
           {this.makeSlides()}
-        </Carousel>
+        </Coverflow>
       </div>
     )
   }
