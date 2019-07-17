@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import AliceCarousel from 'react-alice-carousel'
 import Coverflow from 'react-coverflow'
-import "react-alice-carousel/lib/alice-carousel.css";
 
 import './ImageSlideshow.css'
 
