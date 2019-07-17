@@ -21,7 +21,7 @@ class App extends React.Component {
   componentWillMount() {
     document.title = "Keilana's Pets & Co"
   }
-  
+
   componentDidMount() {
     Promise.all(urls.map(url =>
       fetch(url)
@@ -82,13 +82,8 @@ class App extends React.Component {
     .then(resp => resp.json())
     .then(newReview => {
       const reviews = this.state.reviews.filter(rev => rev.id !== newReview.id)
-
-      // console.log("old", this.state.reviews)
-      // console.log("filtered", reviews)
       const newReviews = [...reviews, newReview]
-      // console.log("new", newReviews)
       this.setState({ reviews: newReviews })
-      // console.log("newstate", this.state.reviews)
     })
     .catch(error => console.log(error.message))
   }
@@ -112,7 +107,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className="grid-container">
+      <main >
         <Header />
         <Router>
           <div className="navbar">
@@ -148,7 +143,7 @@ class App extends React.Component {
               render={props => <BookingCalendar events={this.state.events} handleNewBooking={this.handleNewBooking}/>}
             />
           </Router>
-      </div>
+      </main>
     )
   }
 

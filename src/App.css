@@ -4,13 +4,13 @@
   text-align: center;
 }
 
+h1 {
+  margin: auto;
+  font-size: 6vw;
+}
+
 .grid-container {
-  display: grid;
-  /* grid-template-columns: 10% 1fr 1fr 1fr 10%;
-  grid-template-rows: auto;  */
   background-color: #5D737E;
-  /* display: content; */
-  /* grid-column-gap: 30px; */
   text-align: center;
 }
 
@@ -40,6 +40,10 @@ li {
   text-align: center;
   text-decoration: none;
   float: left;
+}
+
+.icon {
+  font-size: 6vw;
 }
 
 .App-link {
