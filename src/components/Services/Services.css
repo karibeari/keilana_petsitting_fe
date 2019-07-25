@@ -1,10 +1,7 @@
 .services {
   min-height: 100vh;
-  grid-column: 1/6;
-  grid-row: 3/4;
   background-color: #0C5E75;
   background-image: url(https://iconka.com/wp-content/uploads/edd/2017/08/dachshund_preview2.png);
-  content: align-center;
   font-family: 'Raleway', sans-serif;
   display: grid;
   grid-template-columns: 5% 1fr 5% 1fr 5% 1fr 5%;
@@ -22,6 +19,8 @@
 
 .fade-card h1 {
   margin-top: 20%;
+  font-size: xx-large;
+  padding: 0 5%;
 }
 
 .services-center {
@@ -32,8 +31,6 @@
 
 .services-card {
   background-color: transparent;
-  width: auto;
-  height: auto;
   perspective: 1000px;
   border-radius: 25px;
 }
@@ -45,8 +42,6 @@
 }
 
 .services-card-inner {
-  position: relative;
-  width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
@@ -62,6 +57,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  font-size: xx-large;
   backface-visibility: hidden;
 
 }
@@ -69,7 +65,6 @@
 .services-card-front {
   background-color: #7BC486;
   font-family: 'Ribeye Marrow', cursive;
-  font-size: 1.5em;
   color: #041F2D;
   border-radius: 25px;
 }
@@ -77,8 +72,6 @@
 .services-card-back {
   background-color: #C0C5C1;
   color: #041F2D;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
   transform: rotateY(180deg);
   padding: 5%;
   border-radius: 25px;

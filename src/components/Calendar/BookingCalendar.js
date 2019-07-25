@@ -28,8 +28,8 @@ class BookingCalendar extends Component {
       <div className="calendar-container">
         <h1 className="calendar-header">When is Keilana available?</h1>
         <NewBookingButton className="center" handleNewBooking={this.props.handleNewBooking}/>
-        <h2>NOTE: Please contact Keilana to confirm booking.</h2>
-        <h2>keilanaferenczy@gmail.com | 310-502-8143</h2>
+        <h2>NOTE: Please contact Keilana to confirm booking.<br></br>
+        keilanaferenczy@gmail.com | 310-502-8143</h2>
         <div className="calendar">
           <BigCalendar
             localizer={localizer}

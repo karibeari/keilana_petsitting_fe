@@ -75,7 +75,7 @@ const Services = () => {
             <div class="services-card-inner">
               <div class="services-card-front">
                 <div className="fade-card">
-                <h1>BEST CUSTOMER DISCOUNTS</h1>
+                <h1>Best Customer Discount</h1>
                 </div>
               </div>
               <div class="services-card-back">
