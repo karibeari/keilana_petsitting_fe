@@ -16,12 +16,12 @@ export default class NewReviewButton extends Component {
 
   render() {
     return(
-      <main>
+      <section>
        <ReviewForm show={this.state.show} handleClose={this.hideModal} handleNewReview={this.props.handleNewReview}/>
        <div className="center">
           <button type="button" className="myButton" id="new-review-button" onClick={this.showModal} >Add A New Review</button>
        </div>
-      </main>
+      </section>
     )
   }
 }
