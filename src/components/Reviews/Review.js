@@ -49,7 +49,7 @@ export default class Review extends Component {
         <EditReviewForm show={this.state.show} handleClose={this.hideModal} updateReview={this.props.updateReview} review={this.state}/>
         <div className="left">
           <FontAwesomeIcon className="icon" icon={this.displayPetIcon()} size="4x" /><br></br>
-          <h1>{pet_name}</h1>
+          <h1 id="petname">{pet_name}</h1>
         </div>
         <div className="center">
           <h2>{new Date(created_at).toDateString()}</h2>
