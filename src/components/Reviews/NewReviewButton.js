@@ -18,7 +18,7 @@ export default class NewReviewButton extends Component {
     return(
       <section>
        <ReviewForm show={this.state.show} handleClose={this.hideModal} handleNewReview={this.props.handleNewReview}/>
-       <div className="center">
+       <div className="center review-button">
           <button type="button" className="myButton" id="new-review-button" onClick={this.showModal} >Add A New Review</button>
        </div>
       </section>

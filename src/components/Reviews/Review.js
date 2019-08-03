@@ -48,15 +48,13 @@ export default class Review extends Component {
       <div className="review-grid">
         <EditReviewForm show={this.state.show} handleClose={this.hideModal} updateReview={this.props.updateReview} review={this.state}/>
         <div className="left">
-          <FontAwesomeIcon className="icon" icon={this.displayPetIcon()} size="4x" /><br></br>
           <h1 id="petname">{pet_name}</h1>
+          <h3>Human: {human_name}</h3>
+          <h3>{new Date(created_at).toDateString()}</h3>
         </div>
         <div className="center">
-          <h2>{new Date(created_at).toDateString()}</h2>
-          <br></br>
-          <h3>{human_name} ({pet_name}'s human)</h3>
-          <br></br>
-          <h3>{content}</h3>
+          <FontAwesomeIcon className="icon" icon={this.displayPetIcon()} size="4x" /><br></br>
+          <div className="bubble pointer">"{content}"</div>
         </div>
         <div className="right">
           <button className="myButton" value={id} onClick={this.showModal}>Edit</button>
