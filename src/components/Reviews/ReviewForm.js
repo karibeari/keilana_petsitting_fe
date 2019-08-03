@@ -38,7 +38,7 @@ export default class ReviewForm extends Component {
       <div className={this.showHideClassName()}>
         <section className="modal-main">
           <h1 className="form-title">Add a Review</h1>
-          <form  onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <select className="field" name="pet_type" value={pet_type} onChange={this.handleChange}>
               <option ></option>
               <option value="dog">Dog</option>
@@ -51,8 +51,8 @@ export default class ReviewForm extends Component {
             <input className="field" name="human_name" type="text" value={human_name} placeholder="Human Name" onChange={this.handleChange}/>
             <input className="field" name="content" value={content} placeholder="Describe your pet's experience at Keilana's Petsitting" onChange={this.handleChange}/> <br></br>
             <input className="myButton" type="submit" value="Submit"/>
-            <button className="myButton" onClick={this.props.handleClose}>Cancel</button>
           </form>
+          <button className="myButton" onClick={this.props.handleClose}>Cancel</button>
         </section>
       </div>
     )

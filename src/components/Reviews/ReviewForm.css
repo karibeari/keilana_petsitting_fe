@@ -11,11 +11,12 @@
 .modal-main {
   position:fixed;
   background: #99B4C4;
-  width: 80%;
+  width: 60%;
   height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  text-align: center;
 }
 
 .display-block {
@@ -27,6 +28,10 @@
 }
 
 .form-title {
+  text-align: center;
+}
+
+form {
   text-align: center;
 }
 
