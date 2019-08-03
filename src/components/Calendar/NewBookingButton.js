@@ -18,7 +18,7 @@ export default class NewBookingButton extends Component {
       <main className="center-button">
        <BookingForm show={this.state.show} handleClose={this.hideModal} handleNewBooking={this.props.handleNewBooking}/>
        <div >
-          <button type="button" className="myButton" onClick={this.showModal} >Book a Visit</button>
+          <button type="button" className="myButton new-booking" onClick={this.showModal} >Book a Visit</button>
        </div>
       </main>
     )
