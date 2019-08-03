@@ -23,7 +23,7 @@ export default class ImageSlideshow extends Component {
     return(
       <div className="coverflow-background">
         <Coverflow id="coverflow-container"
-          width="100vw"
+          width="90vw"
           height={480}
           displayQuantityOfSide={2}
           navigation={false}
