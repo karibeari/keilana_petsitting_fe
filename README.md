@@ -5,7 +5,7 @@ This web application is the vision of a 9-year-old to support her petsitting bus
 
 ![Services Menu](./services.gif)
 
-![Booking Calendar](./calendar.gif)
+![Booking Calendar](./booking.gif)
 
 ## Getting Started
 
